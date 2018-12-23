@@ -1,1 +1,1 @@
-# SMS-Message-Spam-Detector
+Sentiment analysis using french datas
