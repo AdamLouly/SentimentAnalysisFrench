@@ -1,1 +1,1 @@
-Sentiment analysis using french datas
+Sentiment analysis using french dataset
