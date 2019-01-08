@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<style>
+		
+		.zc-ref {
+  display: none;
+}</style>
+		<script src= 'https://cdn.zingchart.com/2.3.1/zingchart.min.js'></script>
+		<script> ZC.MODULESDIR = 'https://cdn.zingchart.com/2.3.1/modules/';
+		ZC.LICENSE = ['569d52cefae586f634c54f86dc99e6a9','ee6b7db5b51705a13dc2339db3edaf6d'];</script></head>
+	<body>
+		<div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+	
+	</body>
+	<script>
+	
+	zingchart.THEME="classic";
+ 
+var myConfig = {
+    "type": "wordcloud",
+    "background-color": "#FFFFFF",
+    "background-image": "//www.zingchart.com/images/wcbk.png",
+    "title": {
+        "text": "Word Cloud",
+        "align": "left",
+        "background-color": "none",
+        "font-color": "#000000",
+        "font-size": "16px"
+    },
+    "plotarea": {
+        "margin": "15 285 0 0"
+    },
+    "options": {
+        "text": '{{words}}',
+        "color-type": "palette",
+        "palette": [
+            "#1CA658",
+            "#0C401E",
+            "#F2C029",
+            "#D9981E",
+            "#8C3908"
+        ],
+        "max-items": 20,
+        "min-length": 4,
+        "aspect": "spiral",
+        "min-font-size": 14,
+        "max-font-size": 30,
+        "rotate": true
+    }
+};
+ 
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+});
+</script>
+</html>

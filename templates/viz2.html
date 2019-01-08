@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script></head>
+	<body>
+		<div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+    </body>
+    
+    <script>
+    var myConfig = {
+ 	type: "pie", 
+ 	backgroundColor: "#2B313B",
+ 	plot: {
+ 	  borderColor: "#2B313B",
+ 	  borderWidth: 5,
+ 	  // slice: 90,
+ 	  valueBox: {
+ 	    placement: 'out',
+ 	    text: '%t\n%npv%',
+ 	    fontFamily: "Open Sans"
+ 	  },
+ 	  tooltip:{
+ 	    fontSize: '18',
+ 	    fontFamily: "Open Sans",
+ 	    padding: "5 10",
+ 	    text: "%npv%"
+ 	  },
+ 	  animation:{
+      effect: 2, 
+      method: 5,
+      speed: 500,
+      sequence: 1
+    }
+ 	},
+ 	source: {
+ 	  text: 'gs.statcounter.com',
+ 	  fontColor: "#8e99a9",
+ 	  fontFamily: "Open Sans"
+ 	},
+ 	title: {
+ 	  fontColor: "#fff",
+ 	  text: 'Global Browser Usage',
+ 	  align: "left",
+ 	  offsetX: 10,
+ 	  fontFamily: "Open Sans",
+ 	  fontSize: 25
+ 	},
+ 	subtitle: {
+ 	  offsetX: 10,
+ 	  offsetY: 10,
+ 	  fontColor: "#8e99a9",
+ 	  fontFamily: "Open Sans",
+ 	  fontSize: "16",
+ 	  text: 'May 2016',
+ 	  align: "left"
+ 	},
+ 	plotarea: {
+ 	  margin: "20 0 0 0"  
+ 	},
+	series : [
+		{
+			values : [{{words[0]}}],
+			text: '{{words[1]}}',
+		  backgroundColor: '#50ADF5',
+		},
+		{
+			values : [{{words[2]}}],
+			text: '{{words[3]}}',
+		  backgroundColor: 'red',
+		}
+	]
+};
+ 
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+	height: 500, 
+	width: 725 
+});
+    </script>
+    <style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+ 
+ .zc-ref {
+   display: none;
+ }</style>
+</html>
